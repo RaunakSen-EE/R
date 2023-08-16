@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Song Lyrics Website</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #555;
+  }
+  #lyrics {
+    margin-top: 1rem;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Song Lyrics Website</h1>
+  </header>
+  <div class="container">
+    <h2>Search for Lyrics</h2>
+    <input type="text" id="songName" placeholder="Enter song name">
+    <button id="searchButton">Search</button>
+    <div id="lyrics"></div>
+  </div>
+
+  <script>
+    const searchButton = document.getElementById('searchButton');
+    const lyricsContainer = document.getElementById('lyrics');
+
+    searchButton.addEventListener('click', () => {
+      const songName = document.getElementById('songName').value;
+      // You would typically make an API request to fetch lyrics here
+      // and then update the lyricsContainer with the fetched data.
+      // For this example, let's just display a placeholder message.
+      const placeholderMessage = "Lyrics for '" + songName + "' will appear here.";
+      lyricsContainer.textContent = placeholderMessage;
+    });
+  </script>
+</body>
+</html>
